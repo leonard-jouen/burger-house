@@ -1,0 +1,740 @@
+
+/* BASES */
+* {
+    margin: 0;padding: 0;
+}
+
+*,
+*:after,
+*:before {
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --header_color: #ffc74e;
+    --font_title_color: rgba(59, 28, 6, 1);
+}
+
+body{
+    background-color: #ffffff;
+    font: 400 18px/1.3 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    color: #3b1c06;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.wrap {max-width: 1440px;width:100%;margin: 0 auto;padding: 0 15px;}
+.wrap2 {max-width: 1324px;width:100%;margin: 0 auto;padding: 0 15px;}
+.wrap3 {max-width: 1235px;width:100%;margin: 0 auto;padding: 0 15px;}
+.wrap4 {max-width: 785px;width:100%;margin: 0 auto;padding: 0 15px;}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* GLOBAL */
+
+.section_title{
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+}
+
+/* HEADER */
+/* PARTIE MENU */
+
+header{
+    background: url("../img/Rectangle.png") repeat;
+}
+
+header .wrap{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1rem;
+}
+
+header .header_menu{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5rem;
+}
+
+#header .header_menu .logo img{
+    transition: all .3s;
+}
+
+#header .header_menu .logo img:hover{
+    opacity: .7;
+}
+
+#header .header_menu_mobile{
+    display: none;
+}
+
+#header .header_menu_list{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: .3rem;
+}
+
+#header .header_menu_list ul{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+    text-transform: uppercase;
+}
+
+#header .header_menu_list ul a{
+    color: var(--font_title_color);
+    transition: all .3s;
+}
+
+
+#header .header_menu_list ul a:hover{
+    color: #ffffff;
+}
+
+#header .header_menu .livraison{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: .8rem;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+#header .header_menu .livraison img{
+    width: 10%;
+}
+
+#header .header_menu .menu_liste a{
+    color: var(--font_title_color);
+}
+
+/* HEADER */
+/* PARTIE BURGER */
+
+#header .header_burger{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+#header .header_burger .burger_title p{
+    border: 2px dashed rgba(59, 28, 6, 0.65);
+    padding: .5rem 1rem .5rem 1rem;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#header .header_burger .burger_title h1{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-family: 'Alfa Slab One', cursive;
+    letter-spacing: .3rem;
+    text-shadow: 2px 3px 2px rgba(255,255,255,0.8);
+}
+
+#header .header_burger .burger_title h2{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+    text-shadow: 2px 3px 2px rgba(255,255,255,0.8);
+}
+
+#header .header_burger .burger_img{
+    position: relative;
+}
+
+#header .header_burger .header_burger_price{
+    position: absolute;
+    background-color: #df1b1c;
+    border-radius: 50%;
+    color: #ffffff;
+    width: 15%;
+    height: 15%;
+    bottom: 8%;
+    left: 18%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+
+#header .header_burger .header_burger_price_border{
+    position: absolute;
+    width: 13%;
+    height: 13%;
+    bottom: 9%;
+    left: 19%;
+    border: 3px dashed #ffffff;
+    border-radius: 50%;
+}
+
+#header .header_burger .header_burger_price strong{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+#header .header_burger .header_burger_price p{
+    text-transform: uppercase;
+}
+
+#header .header_burger .header_burger_price p:last-child{
+    letter-spacing: .4rem;
+    font-size: 1.3rem;
+}
+
+/* TRY IT */
+
+#tryit .wrap2{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 3rem;
+    gap: 1rem;
+}
+
+#tryit .other_burgers{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+#tryit .tryit_item{
+    position: relative;
+}
+
+#tryit .tryit_item img{
+    position: relative;
+    border-radius: 5px;
+}
+
+#tryit .tryit_item_title{
+    position: absolute;
+    top: 7%;
+    left: 4%;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+#tryit .tryit_item_title h3{
+    font-size: .8rem;
+}
+
+/* CHOOSE & ENJOY */
+
+#choose_enjoy .choose_enjoy_title{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+#choose_enjoy span{
+    background-color: #ffc235;
+    text-transform: uppercase;
+    padding: .5rem 1rem .5rem 1rem;
+    font-weight: 700;
+}
+
+#choose_enjoy .choose_enjoy_burgers{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-top: 3rem;
+}
+
+#choose_enjoy .choose_enjoy_burgers .choose_enjoy_burgeritem{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+#choose_enjoy .choose_enjoy_burgers .choose_enjoy_burgeritem h3{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#choose_enjoy .choose_enjoy_burgers .choose_enjoy_burgeritem_desc{
+    width: 70%;
+}
+
+#choose_enjoy .choose_enjoy_burgers .choose_enjoy_burgeritem a{
+    background-color: #df1b1c;
+    padding: .5rem 1.5rem .5rem 1.5rem;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+
+#choose_enjoy .choose_enjoy_burgers .choose_enjoy_burgeritem a:hover{
+    background-color: #ffffff;
+    color: #df1b1c;
+}
+
+/* UPCOMING EVENTS */
+
+#upcoming_events{
+    padding: 1rem;
+}
+
+#upcoming_events .wrap2{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    box-shadow: 3px 4px 45px 3px rgba(0,0,0,0.44);
+    -webkit-box-shadow: 3px 4px 45px 3px rgba(0,0,0,0.44);
+    -moz-box-shadow: 3px 4px 45px 3px rgba(0,0,0,0.44);
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+#upcoming_events .upcoming_events_title{
+    padding: 1.5rem;
+    width: 50%;
+    position: relative;
+}
+
+#upcoming_events .upcoming_events_title .slide_points{
+    position: absolute;
+    bottom: 5%;
+}
+
+#upcoming_events .upcoming_events_title .slide_points ul{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: .5rem;
+}
+
+#upcoming_events .upcoming_events_title .slide_point{
+    background-color: #dddddd;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    transition: all  .3s;
+}
+
+#upcoming_events .upcoming_events_title .slide_point:hover:not(.selected){
+    border: 2px solid rgba(0,0,0,0.2);
+}
+
+#upcoming_events .upcoming_events_title .selected{
+    background-color: #f9c73e;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+/* RESERVATION */
+
+#reservation{
+    padding-top: 4rem;
+}
+
+#reservation .wrap{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+#reservation .reservation_title{
+    text-transform: uppercase;
+}
+
+#reservation .reservation_form{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 70%;
+}
+
+#reservation .fields{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1rem;
+    width: 100%;
+}
+
+#reservation .fields input{
+    padding: .5rem;
+    margin: .5rem;
+    border: 3px solid rgba(216,216,216,0.42);
+    border-radius: 5px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+#reservation .fields input[type=submit]{
+    background-color: #df1b1c;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+    transition: all .3s;
+}
+
+#reservation .fields input[type=submit]:hover{
+    background-color: #ffffff;
+    color: #df1b1c;
+    border: solid 1px #df1b1c;
+}
+
+#reservation .backimg_sauce{
+    background: url("../img/group5_image_1.png") no-repeat;
+    background-size: 40px;
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: 40%;
+    left: 12%;
+}
+
+#reservation .backimg_burger_1{
+    background: url("../img/group5_image_2.png") no-repeat;
+    background-size: 250px;
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    bottom: 5%;
+    right: -8%;
+    transform: rotate(90deg);
+}
+
+#reservation .backimg_burger_2{
+    background: url("../img/group5_image_3.png") no-repeat;
+    background-size: 150px;
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: 0%;
+    left: -4%;
+}
+
+/* FOOTER */
+
+#footer{
+    padding: 1rem;
+    background: url("../img/footer_big_img.jpg") no-repeat center center/cover;
+    color: #ffffff;
+}
+
+#footer .footer_part1{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0 10rem 0;
+}
+
+#footer .footer_part1 .logo{
+    width: 40%;
+}
+
+#footer .footer_part1 .footer_info_item{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#footer .footer_part1 .footer_info_item img{
+    width: 7%;
+}
+
+#footer .footer_part1 .logo img{
+    width: 20%;
+    padding: 1rem;
+}
+
+#footer .footer_part2{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+#footer .footer_part2 .socials{
+    width: 20%;
+}
+
+#footer .footer_part2 .socials ul{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#footer .footer_part2 .socials ul img{
+    transition: all .15s;
+    border: solid 1px #040404;
+    border-radius: 40%;
+}
+
+#footer .footer_part2 .socials ul img:hover{
+    border: solid 5px #ffffff;
+    border-radius: 50%;
+}
+
+#footer .footer_part2 img{
+    width: 80%;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1150px) {
+    #header .header_burger .header_burger_price{
+        width: 25%;
+        height: 25%;
+    }
+
+    #header .header_burger .header_burger_price_border{
+        width: 23%;
+        height: 23%;
+    }
+
+    #upcoming_events .wrap2{
+        flex-flow: column nowrap;
+    }
+
+    #upcoming_events .upcoming_events_title{
+        padding-bottom: 7rem;
+    }
+
+    #upcoming_events .upcoming_events_title{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #header .header_menu_mobile{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        font-size: 1.5rem;
+    }
+
+    #header .header_menu_list{
+        display: none;
+    }
+
+    #header .header_menu{
+        display: none;
+    }
+
+
+    #header .header_burger .header_burger_price{
+        width: 45%;
+        height: 45%;
+    }
+
+    #header .header_burger .header_burger_price_border{
+        width: 43%;
+        height: 43%;
+    }
+
+    #reservation .backimg_sauce{
+        background-size: 30px;
+    }
+
+    #reservation .backimg_burger_1{
+        background-size: 220px;
+    }
+
+    #reservation .backimg_burger_2{
+        background-size: 120px;
+    }
+
+
+    #footer{
+        padding: .5rem;
+    }
+
+    #footer .footer_part1{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 1.5rem 0 2rem 0;
+    }
+
+    #footer .footer_part1 .logo{
+        width: 100%;
+    }
+
+    #footer .footer_part1 .footer_info_item{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: .5rem;
+        padding: .5rem;
+    }
+
+    #footer .footer_part1 .footer_info_item img{
+        width: 10%;
+        padding-top: 2rem;
+    }
+
+    #footer .footer_part1 .logo img{
+        width: 40%;
+        padding: .5rem;
+    }
+
+    #footer .footer_part2{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+    }
+
+    #footer .footer_part2 .socials{
+        width: 40%;
+    }
+
+    #footer .footer_part2 .socials ul{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+
+    #footer .footer_part2 img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    #tryit .wrap2{
+        flex-flow: row wrap;
+    }
+
+    #tryit .other_burgers{
+        flex-flow: column wrap;
+    }
+
+    #tryit .tryit_item{
+        padding-bottom: 2rem;
+    }
+
+    #choose_enjoy .choose_enjoy_burgers{
+        flex-flow: row wrap;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    #reservation .backimg_sauce{
+        background-size: 30px;
+    }
+
+    #reservation .backimg_burger_1{
+        background-size: 160px;
+    }
+
+    #reservation .backimg_burger_2{
+        background-size: 80px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #header .header_burger .header_burger_price{
+        display: none;
+    }
+
+    #header .header_burger .header_burger_price_border{
+        display: none;
+    }
+
+    #reservation .backimg_sauce{
+        background-size: 30px;
+    }
+
+    #reservation .backimg_burger_1{
+        background-size: 120px;
+    }
+
+    #reservation .backimg_burger_2{
+        background-size: 60px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    #header .header_burger .burger_title p{
+        padding: .25rem .5rem .25rem .5rem;
+        font-size: .8rem;
+    }
+
+    #header .header_burger .burger_title h1{
+        font-size: 3rem;
+    }
+
+    #header .header_burger .burger_title h2{
+        font-size: 1.5rem;
+    }
+
+    #tryit .tryit_item_title h3{
+        font-size: .6rem;
+    }
+
+    #tryit .tryit_item_title h2{
+        font-size: .8rem;
+    }
+
+    #reservation .reservation_form{
+        flex-flow: column nowrap;
+        width: 100%;
+    }
+
+    #reservation .backimg_sauce{
+        display: none;
+    }
+
+    #reservation .backimg_burger_1{
+        display: none;
+    }
+
+    #reservation .backimg_burger_2{
+        display: none;
+    }
+}
